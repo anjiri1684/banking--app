@@ -5,7 +5,7 @@ function AnimatedCounter({ amount }: { amount: number }) {
   return (
     <div className="w-full">
       <CountUp
-        duration={6}
+        duration={2}
         decimal=","
         decimals={2}
         prefix="Kes"
