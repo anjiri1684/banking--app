@@ -9,15 +9,7 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
+import { Form } from "@/components/ui/form";
 import { Button } from "@/components/ui/button";
 import CustomInput from "./CustomInput";
 import { authFormSchema } from "@/lib/utils";
@@ -177,17 +169,18 @@ function AuthForm({ type }: { type: string }) {
               </div>
             </form>
           </Form>
+
           <footer className="flex justify-center gap-1">
             <p className="text-14 font-normal text-gray-600">
               {type === "sign-in"
-                ? "Don't have an account"
-                : "Already have an account"}
+                ? "Don't have an account?"
+                : "Already have an account?"}
             </p>
             <Link
               href={type === "sign-in" ? "/sign-up" : "/sign-in"}
               className="form-link"
             >
-              {type === "sign-in" ? "Sign In" : "Sign Up"}
+              {type === "sign-in" ? "Sign up" : "Sign in"}
             </Link>
           </footer>
         </>
